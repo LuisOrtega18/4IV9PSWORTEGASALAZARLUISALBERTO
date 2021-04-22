@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/subestilo.css">
+    <script src="../JS/problema9.js"></script>
+
+    <title>Ejercicio 9 y 10</title>
+</head>
+<body>
+
+    <header class="header">
+		<div class="container">
+            <div class="logo">
+                <h1>Menu</h1>
+            </div>
+		    <div class="btn-menu">
+			    <label for="btn-menu">☰</label>
+		    </div>
+		</div>
+	</header>
+
+	<div class="capa"></div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+	    <div class="cont-menu">
+		    <nav>
+                <a href="index.html">Inicio</a>
+			    <a href="Eje1-2.html">Ejercicio 1-2</a>
+			    <a href="Eje3-4.html">Ejercicio 3-4</a>
+			    <a href="Eje5-6.html">Ejercicio 5-6</a>
+			    <a href="Eje7-8.html">Ejercicio 7-8</a>
+			    <a href="#">Ejercicio 9 y 10</a>
+		    </nav>
+		    <label for="btn-menu">✖️</label>
+	    </div>
+    </div>
+
+
+    <article class="caja">
+        <section class="EjercicioPar">
+            <h1 class="Eje1">Ejercicio 9</h1>
+            <div class="texto1">
+            <p>Determinar la cCantidad de dinero que recibirá un trabajador por concepto de las horas extras 
+                trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se 
+                consideran horas extras y que estas se pagan al doble de una hora normal cuando no exceden de 8; si las horas 
+                extras exceden de 8 se pagan las primeras 8 al doble de lo que se paga las normales y el resto al triple.                 
+            </p>
+
+
+            <form method="POST" name="HorasExtra">
+                <table class="tabla" align="center" border="1">
+                    <tr>
+                        <td class="tdarriba">Introduce el sueldo por hora:</td>
+                        <td class="tdabajo"><input type="text"  name="sueldo_hora" onkeypress="return validar(event)"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="tdarriba">Introduce el numero de horas trabajadas:</td>
+                        <td class="tdabajo"><input type="text"  name="horas" onkeypress="return validar(event)"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td class="tdabajo"><input type="button" value="Calcular Sueldo"
+                            name="enviar" onclick="sueldos()"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="tdarriba">Tu sueldo es:</td>
+                        <td><input type="text" name="sueldo"
+                            id="cantidadi" readonly="readonly"
+                            class="input_text" ></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar" 
+                            name="reset" onclick="borrar()"></td>
+                    </tr>
+
+                </table>
+            </form>
+
+
+
+            </div>
+        </section>
+
+        <section class="EjercicioImpar">
+            <h1 class="Eje2">Ejercicio 10</h1>
+            <div class="texto2">
+            <p>Calcule la utilidad que un trabjador recibe en el reparto anual de utilidades si este se le asigna como un porcentaje 
+                de su salario mensual que depende de su antiguedad en la empresa de acuerdo con la siguiente tabla: 
+            </p>
+            <table class="table2">
+
+                <tr>
+                    <td class="td1">Tiempo</td>
+                    <td class="td1">utilidad</td>
+                </tr>
+                
+                <tr>
+                    <td class="tdd">Menos de un año</td>
+                    <td class="tdi">5% del salario</td>
+                </tr>
+                
+                <tr>
+                    <td class="tdd">1 año o más y menos de 2</td>
+                    <td class="tdi">7% del salario</td>
+                </tr>
+
+                <tr>
+                    <td class="tdd">2 años o más y menos de 5</td>
+                    <td class="tdi">10% de utilidad</td>
+                </tr>
+                
+                <tr >
+                    <td class="tdd">5 años o más y menos de 10 años</td>
+                    <td class="tdi">15% del salario</td>
+                </tr >
+                
+                <tr>
+                    <td class="tdd">10 años o más</td>
+                    <td class="tdi">20% del salario</td>
+                </tr>
+            </table>
+
+
+            <form method="POST" name="utilidad">
+                <table class="tabla" align="center" border="1">
+                    <tr>
+                        <td class="tdarriba">Introduce tu sueldo:</td>
+                        <td class="tdabajo"><input type="text"  name="sueldo" onkeypress="return validar(event)"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="tdarriba">Introduce tus años de antigüedad:</td>
+                        <td class="tdabajo"><input type="text"  name="años" onkeypress="return validar(event)"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td></td>
+                        <td class="tdabajo"><input type="button" value="Calcular utilidad"
+                            name="enviar" onclick="utilidads()"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="tdarriba">Tu sueldo es:</td>
+                        <td><input type="text" name="sueldoX"
+                            id="cantidadi" readonly="readonly"
+                            class="input_text" ></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar" 
+                            name="reset" onclick="borrar2()"></td>
+                    </tr>
+
+                </table>
+            </form>
+
+
+            </div>
+        </section>
+        
+    </article>
+    
+</body>
+</html>
